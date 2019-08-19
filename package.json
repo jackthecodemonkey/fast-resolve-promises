@@ -1,13 +1,31 @@
 {
   "name": "fast-resolve-promise",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "license": "ISC",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "private": false,
+  "keywords": [
+    "promise",
+    "promise resolve",
+    "promises parallel",
+    "promise resolve notification"
+  ],
   "dependencies": {
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-scripts": "3.1.1"
   },
+  "files": [
+    "dist"
+  ],
+  "author": "Jack",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jackthecodemonkey/fast-resolve-promises.git"
+  },
   "scripts": {
+    "publish:npm": "SET NODE_ENV=production && if exist dist rmdir /s /q dist && mkdir dist && npx babel src/fastresolvePromise --out-dir dist --copy-files",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -27,5 +45,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.5.5"
   }
 }
